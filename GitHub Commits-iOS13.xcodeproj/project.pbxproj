@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		8D808BB2246C5DCB009961FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D808BB0246C5DCB009961FE /* Main.storyboard */; };
 		8D808BB4246C5DCC009961FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D808BB3246C5DCC009961FE /* Assets.xcassets */; };
 		8D808BB7246C5DCC009961FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D808BB5246C5DCC009961FE /* LaunchScreen.storyboard */; };
+		8D808BC0246C6A68009961FE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8D808BBF246C6A68009961FE /* SwiftyJSON */; };
+		8D808BC2246C6C4F009961FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D808BC1246C6C4F009961FE /* DetailViewController.swift */; };
+		8D808BC5246C7468009961FE /* CommitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D808BC3246C7468009961FE /* CommitModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		8D808BB3246C5DCC009961FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D808BB6246C5DCC009961FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D808BB8246C5DCC009961FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D808BC1246C6C4F009961FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8D808BC4246C7468009961FE /* CommitModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommitModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D808BC0246C6A68009961FE /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +65,9 @@
 				8D808BAA246C5DCB009961FE /* AppDelegate.swift */,
 				8D808BAC246C5DCB009961FE /* SceneDelegate.swift */,
 				8D808BAE246C5DCB009961FE /* ViewController.swift */,
+				8D808BC1246C6C4F009961FE /* DetailViewController.swift */,
 				8D808BB0246C5DCB009961FE /* Main.storyboard */,
+				8D808BC3246C7468009961FE /* CommitModel.xcdatamodeld */,
 				8D808BB3246C5DCC009961FE /* Assets.xcassets */,
 				8D808BB5246C5DCC009961FE /* LaunchScreen.storyboard */,
 				8D808BB8246C5DCC009961FE /* Info.plist */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "GitHub Commits-iOS13";
+			packageProductDependencies = (
+				8D808BBF246C6A68009961FE /* SwiftyJSON */,
+			);
 			productName = "GitHub Commits-iOS13";
 			productReference = 8D808BA7246C5DCB009961FE /* GitHub Commits-iOS13.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 8D808B9E246C5DCB009961FE;
+			packageReferences = (
+				8D808BBE246C6A68009961FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 8D808BA8246C5DCB009961FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +155,8 @@
 				8D808BAF246C5DCB009961FE /* ViewController.swift in Sources */,
 				8D808BAB246C5DCB009961FE /* AppDelegate.swift in Sources */,
 				8D808BAD246C5DCB009961FE /* SceneDelegate.swift in Sources */,
+				8D808BC2246C6C4F009961FE /* DetailViewController.swift in Sources */,
+				8D808BC5246C7468009961FE /* CommitModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +354,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D808BBE246C6A68009961FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D808BBF246C6A68009961FE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D808BBE246C6A68009961FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8D808BC3246C7468009961FE /* CommitModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D808BC4246C7468009961FE /* CommitModel.xcdatamodel */,
+			);
+			currentVersion = 8D808BC4246C7468009961FE /* CommitModel.xcdatamodel */;
+			path = CommitModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D808B9F246C5DCB009961FE /* Project object */;
 }
